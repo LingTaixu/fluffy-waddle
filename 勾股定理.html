@@ -1,0 +1,10 @@
+<script>
+  function square(num) {
+    if (typeof num === 'number')  return num * num
+  }
+  function PythagorasTheorem(a, b) {
+    if (typeof a === 'number' && typeof b === "number") return Math.sqrt(square(a) + square(b))
+    return '参数错误！'
+  }
+  console.log(PythagorasTheorem(3, 4));
+</script>
