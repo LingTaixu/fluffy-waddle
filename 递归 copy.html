@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>递归</title>
+</head>
+
+<body>
+  <script>
+    const arr = [{
+      "id": 1,
+      "name": "\u756a\u53f71",
+      "sort": 0,
+      "children": [{
+        "id": 98,
+        "pid": 0,
+        "name": "\u9500\u552e\u90e81",
+        "sort": 0,
+        "dept_id": 1,
+        "children": [{
+          "id": 121,
+          "pid": 98,
+          "name": "\u54c8\u54c8\u54c8\u54c8\u55dd",
+          "sort": 0,
+          "dept_id": 1
+        }]
+      }, {
+        "id": 86,
+        "pid": 0,
+        "name": "\u6d4b\u8bd5",
+        "sort": 0,
+        "dept_id": 1
+      }, {
+        "id": 24,
+        "pid": 0,
+        "name": "\u8d44\u6e90\u90e8",
+        "sort": 0,
+        "dept_id": 1,
+        "children": [{
+          "id": 130,
+          "pid": 24,
+          "name": "\u5355\u4f4d\u8bfb\u6cd5",
+          "sort": 0,
+          "dept_id": 1
+        }]
+      }]
+    }, {
+      "id": 5,
+      "name": "\u756a\u53f72",
+      "sort": 1,
+      "children": [{
+        "id": 126,
+        "pid": 0,
+        "name": "\u5206\u5f97\u7684",
+        "sort": 0,
+        "dept_id": 5
+      }, {
+        "id": 91,
+        "pid": 0,
+        "name": "\u8d44\u6e90\u90e82",
+        "sort": 0,
+        "dept_id": 5
+      }, {
+        "id": 83,
+        "pid": 0,
+        "name": "\u7f51\u7edc\u90e8",
+        "sort": 0,
+        "dept_id": 5
+      }]
+    }, {
+      "id": 6,
+      "name": "\u4e94\u6761\u609f",
+      "sort": 1,
+      "children": [{
+        "id": 1,
+        "pid": 0,
+        "name": "\u563b\u563b\u563b",
+        "sort": 0,
+        "dept_id": 6,
+        "children": [{
+          "id": 107,
+          "pid": 1,
+          "name": "4454-1-2",
+          "sort": 0,
+          "dept_id": 6,
+          "children": [{
+            "id": 115,
+            "pid": 107,
+            "name": "\u554a\u54c8\u54c8",
+            "sort": 0,
+            "dept_id": 6
+          }]
+        }]
+      }, {
+        "id": 106,
+        "pid": 0,
+        "name": "4454-1",
+        "sort": 0,
+        "dept_id": 6
+      }]
+    }, {
+      "id": 7,
+      "name": "\u5927\u53d4\u5927\u5a76",
+      "sort": 1,
+      "children": [{
+        "id": 127,
+        "pid": 0,
+        "name": "\u63a8\u5e7f\u5c0f\u5f1f",
+        "sort": 0,
+        "dept_id": 7,
+        "children": [{
+          "id": 112,
+          "pid": 127,
+          "name": "\u70ed\u70ed",
+          "sort": 0,
+          "dept_id": 7
+        }]
+      }]
+    }, {
+      "id": 11,
+      "name": "\u63a8\u5e7f",
+      "sort": 1
+    }]
+    
+  </script>
+</body>
+
+</html>

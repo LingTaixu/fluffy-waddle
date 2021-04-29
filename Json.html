@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON可视化</title>
+</head>
+<style>
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .leftBox {
+    width: 50vw;
+    height: 100vh;
+  }
+
+  .rightBox {
+    width: 50vw;
+    height: 100vh;
+  }
+</style>
+
+<body>
+  <div class="content">
+    <div class="leftBox">
+
+    </div>
+    <div class="rightBox">
+
+    </div>
+  </div>
+  <script>
+    function trun() {
+      var jsonStr = { "pay_info": "", "good_id": 56, "good_type": 1, "pay_source": 2 };// json字符串
+      // 格式化json字符串
+      var jsonFormat = formatJson(jsonStr);
+      document.write(jsonFormat)
+    }
+    var formatJson = function (msg) {
+      var rep = "~";
+      var jsonStr = JSON.stringify(msg, null, rep)
+      var str = "";
+      for (var i = 0; i < jsonStr.length; i++) {
+        var text2 = jsonStr.charAt(i)
+        if (i > 1) {
+          var text = jsonStr.charAt(i - 1)
+          if (rep != text && rep == text2) {
+            str += "<br/>"
+          }
+        }
+        str += text2;
+      }
+      jsonStr = "";
+      for (var i = 0; i < str.length; i++) {
+        var text = str.charAt(i);
+        if (rep == text)
+          jsonStr += "&nbsp;&nbsp;&nbsp;&nbsp;"
+        else {
+          jsonStr += text;
+        }
+        if (i == str.length - 2)
+          jsonStr += "<br/>"
+      }
+      return jsonStr;
+    }
+    trun()
+  </script>
+</body>
+
+</html>

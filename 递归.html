@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>递归</title>
+</head>
+
+<body>
+  <!-- <script>
+    let arr = [
+      {
+        name: '一号对象',
+        age: 45,
+        children: [
+          {
+            name: '一号对象的儿子',
+            age: 25,
+            children: [
+              {
+                name: '一号对象的孙子',
+                age: 3,
+                children: [],
+              },
+            ],
+          },
+          {
+            name: '一号对象的第二个儿子',
+            age: 25,
+            children: {
+              name: '一号对象的第二个儿子的孙子',
+              age: 3,
+              children: [],
+            },
+          },
+        ],
+      },
+      {
+        name: '二号对象',
+        age: 27,
+        children: [
+          {
+            name: '二号对象的儿子',
+            age: 15,
+            children: [],
+          },
+          {
+            name: '二号对象的第二个儿子',
+            age: 15,
+            children: [
+              {
+                name: '二号对象的第二个儿子下的孙子',
+                age: 17,
+                children: [],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: '三号对象',
+        age: 45,
+        children: [
+          {
+            name: '三号对象的儿子',
+            age: 25,
+            children: [
+              {
+                name: '三号对象的孙子',
+                age: 3,
+                children: [],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: '四号对象',
+        age: 64,
+        children: [],
+      },
+    ];
+
+    let arr1 = [
+      {
+        num: '1',
+        children: []
+      },
+      {
+        num: '2',
+        children: [
+          {
+            num: '2-1',
+            children: []
+          }
+        ]
+      },
+      {
+        num: '3',
+        children: [
+          {
+            num: '3-1',
+            children: [
+              {
+                num: '3-1-1',
+                children: []
+              }
+            ]
+          }
+        ]
+      },
+    ];
+    class Node {
+      recursion1(arr) {
+        return arr.map(v => {
+          return {
+            obj: v.name,
+            children: v.children.length ? this.recursion1(v.children) : []
+          }
+        })
+      }
+    }
+    const NodeFun = new Node();
+    console.log(NodeFun.recursion1(arr));
+  </script> -->
+  <script>
+    const obj = {
+      "Price1": 2.33,
+      "Gas1": 0,
+      "Money1": 0,
+      "Price2": 2.89,
+      "Gas2": 0,
+      "Money2": 0,
+      "Price3": 3.41,
+      "Gas3": 0.293,
+      "Money3": 1,
+      "Price4": 0,
+      "Gas4": 0,
+      "Money4": 0,
+      "Price5": 0,
+      "Gas5": 0,
+      "Money5": 0,
+      "Gas": 0.293,
+      "Money": 1
+    }
+    class editObjKey {
+      EditKey(obj) {
+        var newObj = {}
+        for (let item in obj) {
+          if (item.includes('Gas')) newObj[item] = obj[item]
+        }
+        return newObj
+      }
+    }
+    const fun = new editObjKey()
+    console.log(fun.EditKey(obj));
+  </script>
+</body>
+
+</html>

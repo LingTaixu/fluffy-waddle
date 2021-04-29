@@ -1,0 +1,11 @@
+<script>
+  var findRepeatNumber = function (nums) {
+    let map = new Map();
+    for (let i of nums) {
+      if (map.has(i)) return i;
+      map.set(i, 1);
+    }
+    return null;
+  };
+  findRepeatNumber([1, 2, 3, 4, 5, 5, 2, 1])
+</script>
